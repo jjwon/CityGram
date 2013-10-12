@@ -48,10 +48,10 @@
     -ms-transition: all 50ms ease-out;
     transition: all 50ms ease-out;
     left: 0;
-    height: 25%;
+    height: 30%;
     width: 100%;
     display: block;
-    bottom: -25%;
+    bottom: -30%;
     line-height: 12px;
     text-align: center;
 }
