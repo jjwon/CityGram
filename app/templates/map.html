@@ -45,13 +45,13 @@ var mapStruct = {
   google.maps.event.addListener(map, 'click', function(event) {
     placeMarker(event.latLng);
     //getPictures(event.latLng);
-    $.post("/",
+    $.post("/stream",
     {
       lat: event.latLng.lat(),
       lng: event.latLng.lng()
     },
     function () {
-      window.location.href = '/';
+      window.location.href = '/stream';
     });
   });
 }
@@ -85,13 +85,13 @@ function popularCities(elm) {
    else if (elm.id == "London"){
       city = popCities.London; 
    }
-    $.post("/",
+    $.post("/stream",
     {
       lat: city[0],
       lng: city[1]
     },
     function () {
-      window.location.href = '/';
+      window.location.href = '/stream';
     });     
 }
 
@@ -102,7 +102,7 @@ function popularCities(elm) {
 <body>
 
     <div class="logo">
-      <img src= "{{ url_for('static', filename='img/logo.png') }}">
+      <a href="/"><img src= "{{ url_for('static', filename='img/logo.png') }}"></a>
     </div>
 
 <!--     <div class="nav-bar">

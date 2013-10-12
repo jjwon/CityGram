@@ -24,10 +24,28 @@
     <!--
       jCarousel skin stylesheet
     -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='skins/home_page.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='skins/skin.css') }}" />
 
     <script type="text/javascript" src="{{ url_for('static', filename='js/carousel.js') }}"></script>
 
+    <script>
+      // $(document).ready(function() {
+      //   $( ".jcarousel" ).scroll(function() {
+      //     console.log("hello");
+      //   });  
+      // });
+  
+    </script>
+
+
+<!-- 
+    <div class="nav-bar">
+      <ul>
+        <li><a href="/map">map</a></li>
+        <li><a href="/smd">smd</a></li>
+      </ul>
+    </div>
+ -->
   </head>
 
   <body>
@@ -38,11 +56,8 @@
       </a>
     </div>
 
-    <div class="intro-text">
-      <p>Viewfinder is a geography-oriented Instagram viewer.</p>
-      <p>Scroll through the pictures with by clicking the arrows at the ends of the carousel, or by using the left and right arrow keys.</p>
-      <br>
-      <p>Check out the map to find new locations <a href="/map">here!</a>
+    <div class="map-link">
+      Go back to the <a href="/map">map</a>
     </div>
 
     <div class="jcarousel-wrapper">

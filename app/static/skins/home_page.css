@@ -1,9 +1,9 @@
 .jcarousel-wrapper {
     margin-top: 0px;
     position: relative;
-    top: 150px;
+    top: 250px;
     border: 15px solid #6c7068;
-    height: 400px;
+    height: 250px;
     margin: 0px;
     border-radius: 15px;
 }
@@ -12,7 +12,7 @@
     position: absolute;
     overflow: hidden;
     /* You need at least a height, adjust this to your needs */
-    height: 400px;
+    height: 250px;
     width: 100%;
 }
 
@@ -65,7 +65,7 @@
 }
 
 .jcarousel li img {
-    height: 400px;
+    height: 250px;
 }
 
 .innerHover-prev {
@@ -136,4 +136,22 @@
 .innerHover-prev:hover .jcarousel-control-prev,
 .innerHover-next:hover .jcarousel-control-next {
     display: block;
+}
+
+.intro-text {
+    position: absolute;
+    color: #6c7068;
+    top: 125px;
+    /*font-size: 1.5em;*/
+    font-family: "Lato";
+    text-align: center;
+    width: 100%;
+}
+
+.intro-text p {
+    display: inline-block;
+}
+
+.intro-text a {
+    text-decoration: none;
 }

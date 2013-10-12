@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" />
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+
+    <link rel = "stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" media="screen" />
+
+    <!--
+      jQuery library
+    -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+    <!--
+      jCarousel library
+    -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.jcarousel.min.js') }}"></script>
+
+    <!--
+      jCarousel skin stylesheet
+    -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='skins/skin.css') }}" />
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/carousel.js') }}"></script>
+
+    <script>
+      // $(document).ready(function() {
+      //   $( ".jcarousel" ).scroll(function() {
+      //     console.log("hello");
+      //   });  
+      // });
+  
+    </script>
+
+
+<!-- 
+    <div class="nav-bar">
+      <ul>
+        <li><a href="/map">map</a></li>
+        <li><a href="/smd">smd</a></li>
+      </ul>
+    </div>
+ -->
+  </head>
+
+  <body>
+
+    <div class="logo">
+      <a href="/map">
+        <img src= "{{ url_for('static', filename='img/logo.png') }}">
+      </a>
+    </div>
+    <div class="error">
+      There are no images here.  Go back to the <a href="/map">maps</a> page?
+    </div>
+  <div class="footer">
+  &copy Howarad &amp Gayson
+  </div>
+
+
+  </body>
+  
+</html>
