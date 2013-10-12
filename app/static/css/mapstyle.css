@@ -1,21 +1,7 @@
-html {
-	height:100%
-}
-
-body {
-	height:100%;
-/*	margin:0;
-	padding:0;
-	background:#181818;*/
-/*	border-style:solid;
-	border-color:white;
-	border-width:10px;*/
-}
-
 nav {
 	position: relative;
-	font-family: "Merriweather";
-	margin-top: -15px;
+	font-family: "Lato";
+	margin-top: 100px;
 	text-align: center;
 	color:#FFF;
 	font-size: 150%;
@@ -63,7 +49,7 @@ nav li a:hover{
 	margin-top: 0px;
 	margin-left: auto;
 	margin-right: auto;
-	height:80%;
-	width:80%;
+	height:65%;
+	width:60%;
 	border:1.5px solid white;
 }

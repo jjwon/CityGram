@@ -99,18 +99,19 @@ function popularCities(elm) {
 </script>
 </head>
 
+<body>
+
     <div class="logo">
-      <font color="1693A7">view</font><font color="C2CBCE">finder</font>
+      <img src= "{{ url_for('static', filename='img/logo.png') }}">
     </div>
 
-    <div class="nav-bar">
+<!--     <div class="nav-bar">
       <ul>
         <li><a href="/map">map</a></li>
         <li><a href="/smd">smd</a></li>
       </ul>
-    </div>
+    </div> -->
 
-<body>
 <nav>
   <ul>
     <li><a href="#" onclick="popularCities(this);" id="SF">San Francisco, USA</a></li>
@@ -123,4 +124,7 @@ function popularCities(elm) {
 <div id="googleMap"></div>
 
 </body>
+  <div class="footer">
+  &copy Howarad &amp Gayson
+  </div>
 </html>

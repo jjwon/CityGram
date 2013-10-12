@@ -8,7 +8,7 @@ class MediaGrabber:
 	def __init__(self):
 		pass
 
-	def get_pics(self, lat, lng, count=5):
+	def get_pics(self, lat, lng, count=20):
 		"""
 		Returns a list of media (picture urls) from a given area.
 		"""

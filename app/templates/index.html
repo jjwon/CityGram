@@ -34,23 +34,28 @@
       //     console.log("hello");
       //   });  
       // });
+  
     </script>
 
 
-    <div class="logo">
-      <font color="1693A7">view</font><font color="C2CBCE">finder</font>
-    </div>
-
+<!-- 
     <div class="nav-bar">
       <ul>
         <li><a href="/map">map</a></li>
         <li><a href="/smd">smd</a></li>
       </ul>
     </div>
-
+ -->
   </head>
 
   <body>
+
+    <div class="logo">
+      <a href="/map">
+        <img src= "{{ url_for('static', filename='img/logo.png') }}">
+      </a>
+    </div>
+
 
     <div class="jcarousel-wrapper">
       <div class="jcarousel-outer"><div class="jcarousel">

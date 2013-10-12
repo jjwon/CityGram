@@ -1,20 +1,25 @@
 html, body {
     background: #FCFEF5;
+    height: 100%;
+    overflow: hidden;
+    text-decoration: none;
 }
 
-.logo {
-    margin-left: 50px;
-    font-family: "Lato";
-    font-weight: 300;
-    font-size: 4em;
-    float: left;
-    margin-top: 20px;
-    margin-bottom: 20px;
+.logo img {
+    margin-left: 37%;
+    position: absolute;
+    top: 20px;
+    width: 25%;
 }
 
-.nav-bar {
-    margin-top: 50px;
-    margin-right: 50px;
+.logo a {
+    text-decoration: none;
+}
+
+/*.nav-bar {
+    position: absolute;
+    top: 48px;
+    right: 400px;
     font-family: "Merriweather";
     font-weight: 400;
     font-size: 1.5em;
@@ -35,21 +40,18 @@ html, body {
 .nav-bar a {
     display: inline-block;
     color: #C2CBCE;
+    text-decoration: none;
 }
 
 .nav-bar a:hover {
     color: #000;
-}
+}*/
 
 
 body {
     font: 100% "Helvetica", Trebuchet, Tahoma, Verdana, Arial, sans-serif;
     color: #333;
     padding: 0;
-}
-
-body * {
-    line-height:1.22em;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -130,4 +132,10 @@ td pre {
     font: 85% monospace;
     padding: 5px;
     margin: 5px 0;
+}
+
+.footer {
+    position: relative;
+    margin-top: 15px;
+    text-align: center;
 }
