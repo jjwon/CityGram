@@ -20,7 +20,7 @@ class MediaGrabber:
 		for elem in data["data"]:
 			caption = ''
 			if elem["caption"]:
-				caption = elem["caption"]["text"].encode('ascii', 'ignore')
+				caption = unicode(elem["caption"]["text"])
 			out = {
 			       "image_link": elem["images"]["standard_resolution"]["url"].encode('ascii', 'ignore'),
 			       "caption": 'CAPTION: ' + caption,

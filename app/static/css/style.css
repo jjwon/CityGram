@@ -134,6 +134,11 @@ td pre {
     margin: 5px 0;
 }
 
+.random {
+    position: relative;
+    height: 212px;
+}
+
 .footer {
     position: relative;
     margin-top: 15px;
