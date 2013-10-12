@@ -1,0 +1,69 @@
+html {
+	height:100%
+}
+
+body {
+	height:100%;
+/*	margin:0;
+	padding:0;
+	background:#181818;*/
+/*	border-style:solid;
+	border-color:white;
+	border-width:10px;*/
+}
+
+nav {
+	position: relative;
+	font-family: "Merriweather";
+	margin-top: -15px;
+	text-align: center;
+	color:#FFF;
+	font-size: 150%;
+	width: 100%;
+	display: inline-block;
+}
+
+nav ul{
+	list-style-type: none;
+	display:inline-block;
+}
+
+nav li{
+	display:inline-block;
+}
+
+nav li a{
+	text-decoration: none;
+	font-size: 80%;
+	padding-right: 25px;
+	color:#069;
+	display: inline-block;
+}
+
+nav li a:hover{
+	color:#c00;
+	text-decoration: none;
+}
+
+
+/*.divider-vertical-second-menu{
+   height: 40px;
+   width: 1px;
+   margin: 0 5px;
+   overflow: hidden;
+   background-color: #DDD;
+   border-right: 2px solid #FFF;
+}*/
+/*nav li a {
+  padding-right:2px;
+  border-right: 1px solid #ccc;
+}*/
+
+#googleMap {
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	height:80%;
+	width:80%;
+	border:1.5px solid white;
+}

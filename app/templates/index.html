@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+
+    <link rel = "stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" media="screen" />
+
+    <!--
+      jQuery library
+    -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+    <!--
+      jCarousel library
+    -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery.jcarousel.min.js') }}"></script>
+
+    <!--
+      jCarousel skin stylesheet
+    -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='skins/skin.css') }}" />
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/carousel.js') }}"></script>
+
+    <script>
+      // $(document).ready(function() {
+      //   $( ".jcarousel" ).scroll(function() {
+      //     console.log("hello");
+      //   });  
+      // });
+    </script>
+
+
+    <div class="logo">
+      <font color="1693A7">view</font><font color="C2CBCE">finder</font>
+    </div>
+
+    <div class="nav-bar">
+      <ul>
+        <li><a href="/map">map</a></li>
+        <li><a href="/smd">smd</a></li>
+      </ul>
+    </div>
+
+  </head>
+
+  <body>
+
+    <div class="jcarousel-wrapper">
+      <div class="jcarousel-outer"><div class="jcarousel">
+        <ul>
+          {% for elem in data %}
+            <li>
+              <img src="{{elem.image_link}}">
+              <span class="caption">
+                <p>{{elem.caption}}</p>
+                <p>{{elem.username}}</p>
+              </span>
+            </li>
+          {% else %}
+            <li>NO PICTURES T^T</li>
+          {% endfor %}
+        </ul>
+      </div></div>
+
+      <div class="innerHover-prev">
+        <a href="#" class="jcarousel-control-prev">&lsaquo;</a>
+      </div>
+      <div class="innerHover-next">
+        <a href="#" class="jcarousel-control-next">&rsaquo;</a>   
+      </div>
+    </div>
+  </body>
+
+</html>

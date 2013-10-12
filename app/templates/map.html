@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script
+src="http://maps.googleapis.com/maps/api/js?key=AIzaSyDY0kkJiTPVd2U7aTOAwhc9ySH6oHxOIYM&sensor=false">
+</script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+
+<link rel = "stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" media="screen" />
+
+<link rel="stylesheet" type="text/css" href="../static/css/mapstyle.css" media="screen">
+
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+    <link href='http://fonts.googleapis.com/css?family=Merriweather' rel='stylesheet' type='text/css'>
+
+    <link rel = "stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" media="screen" />
+
+<!-- {{ url_for('static', filename='css/mapstyle.css') }} -->
+
+<script>
+var map;
+var mapCenter=new google.maps.LatLng(51.508742,-0.120850);
+var popCities = {
+  London:[51.539502,0.121064],
+  Tokyo:[35.700802,139.691741],
+  NewYork:[40.739974,74.005494],
+  SanFrancisco:[37.785368,122.419388]  
+};
+
+
+function initialize()
+{
+var mapStruct = {
+  center:mapCenter,
+  minZoom:2,
+  zoom:3, //0(world) - 21(creeper)
+  mapTypeId:google.maps.MapTypeId.ROADMAP //other options:ROADMAP, SATELLITE, HYBRID,TERRAIN
+  };
+
+  map = new google.maps.Map(document.getElementById("googleMap"),mapStruct);
+
+  google.maps.event.addListener(map, 'click', function(event) {
+    placeMarker(event.latLng);
+    //getPictures(event.latLng);
+    $.post("/",
+    {
+      lat: event.latLng.lat(),
+      lng: event.latLng.lng()
+    },
+    function () {
+      window.location.href = '/';
+    });
+  });
+}
+
+function placeMarker(location) {
+  var marker = new google.maps.Marker({
+    position: location,
+    map: map,
+  });
+  var infowindow = new google.maps.InfoWindow({
+    content: 'Latitude: ' + location.lat() + '<br>Longitude: ' + location.lng()
+  });
+  infowindow.open(map,marker);
+}
+
+
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
+function popularCities(elm) {
+   var city = 0;
+   if (elm.id == "SF"){
+      city = popCities.SanFrancisco; 
+   }
+   else if (elm.id == "Tokyo"){
+      city = popCities.Tokyo;   
+   }
+   else if (elm.id == "NY"){
+      city = popCities.NewYork;  
+   }
+   else if (elm.id == "London"){
+      city = popCities.London; 
+   }
+    $.post("/",
+    {
+      lat: city[0],
+      lng: city[1]
+    },
+    function () {
+      window.location.href = '/';
+    });     
+}
+
+
+</script>
+</head>
+
+    <div class="logo">
+      <font color="1693A7">view</font><font color="C2CBCE">finder</font>
+    </div>
+
+    <div class="nav-bar">
+      <ul>
+        <li><a href="/map">map</a></li>
+        <li><a href="/smd">smd</a></li>
+      </ul>
+    </div>
+
+<body>
+<nav>
+  <ul>
+    <li><a href="#" onclick="popularCities(this);" id="SF">San Francisco, USA</a></li>
+    <li><a href="#" onclick="popularCities(this);" id="Tokyo">Tokyo, Japan</a></li>
+    <li><a href="#" onclick="popularCities(this);" id="NY">New York City, USA</a></li>
+    <li><a href="#" onclick="popularCities(this);" id="London">London, England</a></li>
+  </ul>
+</nav>
+
+<div id="googleMap"></div>
+
+</body>
+</html>

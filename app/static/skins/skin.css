@@ -1,0 +1,136 @@
+.jcarousel-wrapper {
+    margin-top: 0px;
+    position: relative;
+    top: 150px;
+    border: 15px solid #6c7068;
+    height: 450px;
+    margin: -8px;
+}
+
+.jcarousel {
+    position: absolute;
+    overflow: hidden;
+    /* You need at least a height, adjust this to your needs */
+    height: 450px;
+    width: 100%;
+}
+
+.jcarousel ul {
+    width: 20000em;
+    position: absolute;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.jcarousel li {
+    background: #6c7068;
+    cursor: pointer;
+    float: left;
+    position: relative;
+    overflow: hidden;
+    color: #FCFEF5;
+    font-size: 6em;
+    border-right: solid #6c7068 15px;
+}
+
+.jcarousel li .caption {
+    background-color: rgba(0,0,0,0.8);
+    position: absolute;
+    z-index: 100;
+    font-size: 12px;
+    -webkit-transition: all 50ms ease-out;
+    -moz-transition: all 50ms ease-out;
+    -o-transition: all 50ms ease-out;
+    -ms-transition: all 50ms ease-out;
+    transition: all 50ms ease-out;
+    left: 0;
+    height: 25%;
+    width: 100%;
+    display: block;
+    bottom: -30%;
+    line-height: 0px;
+    text-align: center;
+}
+
+.jcarousel li:hover .caption {
+    -moz-transform: translateY(-100%);
+    -o-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+}
+
+.jcarousel li img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.innerHover-prev {
+    position: absolute;
+    background: transparent;
+    top: 0;
+    left: 0;
+    width: 30px;
+    height: 100%;
+}
+
+.innerHover-next {
+    position: absolute;
+    background: transparent;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 100%;
+}
+
+.jcarousel-control-prev,
+.jcarousel-control-next { /* make a circle button */
+    opacity: 0.5;
+    display: none;
+    position: absolute;
+    top: 45%;
+    width: 30px; /* circle size */
+    height: 30px;
+    text-align: center;
+    background: #000000; /* circle color */
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 0 1px #000;
+    font: 24px/27px Arial, sans-serif;
+    -webkit-border-radius: 30px;
+       -moz-border-radius: 30px;
+            border-radius: 30px;
+    -webkit-box-shadow: 0 0 2px #fff; /* circle border */
+       -moz-box-shadow: 0 0 2px #fff;
+            box-shadow: 0 0 2px #fff; 
+}
+
+.jcarousel-control-prev {
+    left: 10px;
+}
+
+.jcarousel-control-next {
+    right: 10px;
+}
+
+.jcarousel-control-prev:hover,
+.jcarousel-control-next:hover { /* controls hover effects */
+    opacity: 1;
+    font-weight: bold;
+}
+
+.jcarousel-control-prev.inactive,
+.jcarousel-control-next.inactive {
+    opacity: .5;
+    cursor: default;
+}
+
+.innerHover-prev .jcarousel-control-prev, 
+.innerHover-next .jcarousel-control-next {
+    display: none;
+}
+
+.innerHover-prev:hover .jcarousel-control-prev,
+.innerHover-next:hover .jcarousel-control-next {
+    display: block;
+}

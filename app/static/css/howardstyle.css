@@ -1,0 +1,27 @@
+html, body{
+	height:100%;
+	background-repeat: no-repeat;
+  	background-position: right;
+  	background-color:#181818;
+  	/*background-attachment: scroll;*/
+  	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	z-index:-999;
+  	overflow-x:scroll;
+  	overflow-y:visible; 
+    display:inline;
+    white-space: nowrap;
+}
+
+h1 {
+	text-align: center;
+  color:#FFF;
+}
+
+#film-roll{
+  -webkit-border-image:url(border.png) 30 30 stretch; /* Safari 5 */
+  -o-border-image:url(border.png) 30 30 stretch; /* Opera */
+  border-image:url(border.png) 30 30 stretch;
+}
